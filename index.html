@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Battleship!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+
+  	<div class = "headerItem" id = "scoreboard">
+  		<h2>Scoreboard</h2> 
+  		<div class = "headerItemItem">
+			<p id = 'p1score'>Player 1 Ships: </p>
+			<p id = 'p2score'>player 2 Ships: </p>
+		</div>
+  	</div><!--
+
+  	--><div class = "headerItem">
+    	<h1>Battleship!</h1>
+    	<label for="number_of_ships" id = "numShipsLabel">Number of ships:</label>
+    	<select name="number_of_ships" id="number_of_ships">
+      		<option value="1">1</option>
+      		<option value="2">2</option>
+      		<option value="3">3</option>
+      		<option value="4">4</option>
+      		<option value="5">5</option>
+      		<option value="6">6</option>
+    	</select>
+    	<br>
+    	<button type="button" id="startButton">Start</button>
+    	<button type="button" id="rotateButton">Rotate</button>
+    </div><!--
+
+	--><div class = "headerItem" id = "key">
+	  <h2> Color Key</h2>
+	  <div class = "headerItemItem">
+	  	<p><img src="Images/blue.png"> Miss</p>
+	  	<p><img src="Images/red.png"> Hit</p>
+	  	<p><img src="Images/grey.png"> Ship Placement</p>
+	  </div>
+  	</div>
+
+  </header>
+  <canvas width="1280" height="720" id="canvas"></canvas> 
+  <div class = "canvasBtnContainer" id = "againstBtns">
+  	<button type = "button" class = "canvasBtn" id ="againstHuman" onClick = "humanBtnRegister()">Play Against Human</button>
+  	<button type = "button" class = "canvasBtn" id ="againstAI" onCLick = "AIBtnRegister()">Play Against Computer</button>
+  </div>
+  <div class = "canvasBtnContainer" id = "AIBtns">
+  	<button type = "button" class = "canvasBtn" id = "easyBtn" onClick = "easyBtnRegister()">Easy</button>
+  	<button type = "button" class = "canvasBtn" id = "medBtn" onClick = "medBtnRegister()">Medium</button>
+  	<button type = "button" class = "canvasBtn" id = "hardBtn" onClick = "hardBtnRegister()">Hard</button>
+  </div>
+ </body>
+ <script src="globals.js"></script>
+ <script src="render.js"></script>
+ <script src="executive.js"></script>
+ </html>
